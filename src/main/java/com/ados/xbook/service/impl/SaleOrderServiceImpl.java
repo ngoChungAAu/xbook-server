@@ -439,6 +439,9 @@ public class SaleOrderServiceImpl extends BaseService implements SaleOrderServic
             if (s.getOrderItems().size() == 0) {
                 s.setStatus(-1);
             }
+            if (s.getStatus() == 0) {
+                s.setStatus(-1);
+            }
         }
     }
 }
